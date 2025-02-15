@@ -68,6 +68,14 @@
     --smaller-font-size: 0.813rem;
   }
 }
+@media screen and (max-width: 768px) {
+  .home__title {
+    font-size: 2rem;
+  }
+  .home__subtitle {
+    font-size: 1.25rem;
+  }
+}
 /*================= Variables Dark Theme ===============*/
 body.dark-theme {
   /*========= HSL Color mode =========*/
