@@ -160,3 +160,8 @@ themeButton.addEventListener("click", () => {
   localStorage.setItem("selected-theme", getCurrentTheme());
   localStorage.setItem("selected-icon", getCurrentIcon());
 });
+const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+if (prefersDarkMode) {
+  document.body.classList.add(darkTheme);
+  themeButton.classList.add(iconTheme);
+}

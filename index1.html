@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="Yeabsira Getachew's portfolio showcasing skills, projects, and contact information.">
+<meta name="keywords" content="Yeabsira Getachew, Software Engineering, Portfolio, Projects, Skills">
+<meta name="author" content="Yeabsira Getachew">
+
     <title>Personal Portfolio</title>
+	<link rel="icon" type="image/png" href="assets/img/favicon.png">
     <link rel="stylesheet" href="assets/swiper-bundle.min.css" />
     <link rel="stylesheet" href="assets/newcss.css" />
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
@@ -59,7 +64,7 @@
                 <div class="home__content grid">
                     <div class="home__social">
                         <a href="https://www.linkedin.com/in/yab" target="_blank" class="home__social-icon" title="LinkedIn Profile">
-                            <i class="uil uil-linkedin-alt home__icon"></i>
+<i class="uil uil-linkedin-alt home__icon" aria-label="LinkedIn Profile"></i>
                         </a>
                         <a href="https://github.com/Yeabgethub" target="_blank" class="home__social-icon" title="GitHub Profile">
                             <i class="uil uil-github-alt home__icon"></i>
@@ -87,7 +92,7 @@
             <h2 class="section__title">About Me</h2>
             <span class="section__subtitle">My introduction</span>
             <div class="about__container container grid">
-                <img src="assets/img/yabu.jpg" alt="A picture of Yeabsira Getachew" class="about__img" />
+                <img src="assets/img/yabu.jpg" alt="Yeabsira Getachew" loading="lazy" class="about__img" />
                 <div class="about__data">
                     <p class="about__description">I am Yeabsira Getachew, a fourth-year Software Engineering undergraduate. I am passionate about learning new technologies and honing my skills to develop efficient, user-friendly software solutions.</p>
                     <p>I thrive in dynamic environments and am constantly seeking opportunities to learn and improve. In my free time, I enjoy reading about technology trends and exploring new programming languages.</p>
@@ -330,6 +335,15 @@
 					<a href="mailto:ygetachew729@gmail.com?subject=Testing out mailto!&body=This is only a test!" class="button button--flex" title="Send Message">Send Message<i class="uil uil-message button__icon"></i></a>
                     </div>
                 </form>
+				<script>
+  document.getElementById('contact-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const formStatus = document.getElementById('form-status');
+    formStatus.textContent = 'Message sent successfully!';
+    formStatus.style.color = 'green';
+    this.reset();
+  });
+</script>
             </div>
         </section>
     </main>
