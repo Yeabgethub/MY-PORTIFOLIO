@@ -4,12 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta name="description" content="Yeabsira Getachew's portfolio showcasing skills, projects, and contact information.">
-<meta name="keywords" content="Yeabsira Getachew, Software Engineering, Portfolio, Projects, Skills">
-<meta name="author" content="Yeabsira Getachew">
-
+    <meta name="description" content="Yeabsira Getachew's portfolio showcasing skills, projects, and contact information.">
+    <meta name="keywords" content="Yeabsira Getachew, Software Engineering, Portfolio, Projects, Skills">
+    <meta name="author" content="Yeabsira Getachew">
     <title>Personal Portfolio</title>
-	<link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
     <link rel="stylesheet" href="assets/swiper-bundle.min.css" />
     <link rel="stylesheet" href="assets/newcss.css" />
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
@@ -64,7 +63,7 @@
                 <div class="home__content grid">
                     <div class="home__social">
                         <a href="https://www.linkedin.com/in/yab" target="_blank" class="home__social-icon" title="LinkedIn Profile">
-<i class="uil uil-linkedin-alt home__icon" aria-label="LinkedIn Profile"></i>
+                            <i class="uil uil-linkedin-alt home__icon" aria-label="LinkedIn Profile"></i>
                         </a>
                         <a href="https://github.com/Yeabgethub" target="_blank" class="home__social-icon" title="GitHub Profile">
                             <i class="uil uil-github-alt home__icon"></i>
@@ -316,7 +315,7 @@
                         </div>
                     </div>
                 </div>
-                <form action="" class="contact__form grid">
+               <form id="contact-form" class="contact__form grid">
                     <div class="contact__inputs grid">
                         <div class="contact__content">
                             <label for="name" class="content__label">Name</label>
@@ -332,18 +331,10 @@
                         <textarea id="message" cols="0" rows="7" class="contact__input" required></textarea>
                     </div>
                     <div>
-					<a href="mailto:ygetachew729@gmail.com?subject=Testing out mailto!&body=This is only a test!" class="button button--flex" title="Send Message">Send Message<i class="uil uil-message button__icon"></i></a>
+                        <button type="submit" class="button button--flex" title="Send Message">Send Message<i class="uil uil-message button__icon"></i></button>
                     </div>
                 </form>
-				<script>
-  document.getElementById('contact-form').addEventListener('submit', function (e) {
-    e.preventDefault();
-    const formStatus = document.getElementById('form-status');
-    formStatus.textContent = 'Message sent successfully!';
-    formStatus.style.color = 'green';
-    this.reset();
-  });
-</script>
+                <div id="form-status" style="margin-top: 10px; font-size: 1rem;"></div>
             </div>
         </section>
     </main>
@@ -370,12 +361,12 @@
                     <a href="https://twitter.com/yab" target="__blank" class="footer__social-icon" title="Twitter Profile">
                         <i class="fa-brands fa-x-twitter"></i>
                     </a>
-					<a href="https://telegram.com/@wyabu" target="__blank" class="footer__social-icon" title="Twitter Profile">
-                        <i class="fa-brands fa-x-twitter"></i>
+                    <a href="https://telegram.com/@wyabu" target="__blank" class="footer__social-icon" title="Telegram Profile">
+                        <i class="fa-brands fa-telegram"></i>
                     </a>
-					 <a href="https://ygetachew729@gmail.com" target="_blank" class="footer__social-icon" title="Gmail Profile">
-                            <i class="uil uil-gmail-alt home__icon"></i>
-                        </a>
+                    <a href="mailto:ygetachew729@gmail.com" target="_blank" class="footer__social-icon" title="Gmail Profile">
+                        <i class="uil uil-gmail-alt home__icon"></i>
+                    </a>
                 </div>
             </div>
 
@@ -391,5 +382,14 @@
     <script type="text/javascript" src="assets/swiper-bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/2205d59d52.js" crossorigin="anonymous"></script>
     <script src="assets/ptj.js"></script>
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const formStatus = document.getElementById('form-status');
+            formStatus.textContent = 'Message sent successfully!';
+            formStatus.style.color = 'green';
+            this.reset();
+        });
+    </script>
 </body>
 </html>
