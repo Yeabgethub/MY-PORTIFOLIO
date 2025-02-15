@@ -800,14 +800,9 @@ img {
   padding: 0.25rem 0.5rem 0.5rem 0;
 }
 
-/*=================== Footer ==================*/
-
+/*================= Footer ==================*/
 .footer {
   padding-top: 2rem;
-}
-
-.footer__container {
-  row-gap: 3.5rem;
 }
 
 .footer__bg {
@@ -818,31 +813,30 @@ img {
 .footer__title {
   font-size: var(--h1-font-size);
   margin-bottom: var(--mb-0-25);
+  color: #fff;
 }
 
 .footer__subtitle {
   font-size: var(--small-font-size);
+  color: #fff;
 }
 
-.footer__links {
+.footer__socials {
   display: flex;
-  flex-direction: column;
-  row-gap: 1.5rem;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
 }
 
-.footer__link:hover {
-  color: var(--first-color-lighter);
-  transition: 0.3s;
-}
-
-.footer__social {
+.footer__social-icon {
   font-size: 1.25rem;
-  margin-right: var(--mb-1-5);
+  color: #fff;
+  transition: color 0.3s, transform 0.3s;
 }
 
-.footer__social:hover {
+.footer__social-icon:hover {
   color: var(--first-color-lighter);
-  transition: 0.3s;
+  transform: translateY(-0.25rem);
 }
 
 .footer__copy {
@@ -850,13 +844,6 @@ img {
   text-align: center;
   color: var(--text-color-light);
   margin-top: var(--mb-3);
-}
-
-.footer__title,
-.footer__link,
-.footer__subtitle,
-.footer__social {
-  color: #fff;
 }
 
 /*==================== Scroll Up ==================*/
