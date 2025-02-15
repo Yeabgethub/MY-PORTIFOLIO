@@ -1127,7 +1127,22 @@ img {
   .footer__container {
     grid-template-columns: repeat(3, 1fr);
   }
+.footer__social-icon {
+  font-size: 1.25rem;
+  color: #fff;
+  transition: color 0.3s, transform 0.3s;
+}
 
+.footer__social-icon:hover {
+  color: var(--first-color-lighter);
+  transform: translateY(-0.25rem);
+}
+.footer__socials {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
   .footer__bg {
     padding: 3rem 0 3.5rem;
   }
