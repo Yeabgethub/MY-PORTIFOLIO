@@ -12,6 +12,7 @@
       href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
     />
     <link rel="stylesheet" href="skills.css" />
+    <link rel="stylesheet" href="contactus.css" />
   </head>
   <body oncontextmenu="return false">
     <header class="header" id="header">
@@ -566,99 +567,98 @@
       </section>
 
       <section class="contact section" id="contact">
-        <h2 class="section__title">Contact Me</h2>
-        <span class="section__subtitle">Get in touch</span>
+        <div id="form-messages">
+    <span id="message-text"></span>
+    <button id="close-message">&times;</button>
+</div>
+    <h2 class="section__title">Contact Me</h2>
+    <span class="section__subtitle">Get in touch</span>
 
-        <div class="contact__container container grid">
-          <!-- Contact Info -->
-          <div>
+    <div class="contact__container container grid">
+        <div>
             <div class="contact__information">
-              <i class="uil uil-calling contact__icon" aria-hidden="true"></i>
-              <div>
-                <h3 class="contact__title">Phone</h3>
-                <span class="contact__subtitle">
-                  <a href="tel:+251922761360">+251 922 761 360</a>
-                </span>
-              </div>
+                <i class="uil uil-calling contact__icon" aria-hidden="true"></i>
+                <div>
+                    <h3 class="contact__title">Phone</h3>
+                    <span class="contact__subtitle">
+                        <a href="tel:+251922761360">+251 922 761 360</a>
+                    </span>
+                </div>
             </div>
 
             <div class="contact__information">
-              <i
-                class="uil uil-envelope-minus contact__icon"
-                aria-hidden="true"
-              ></i>
-              <div>
-                <h3 class="contact__title">Email</h3>
-                <span class="contact__subtitle"> </span>
-              </div>
+                <i
+                    class="uil uil-envelope-minus contact__icon"
+                    aria-hidden="true"
+                ></i>
+                <div>
+                    <h3 class="contact__title">Email</h3>
+                    <span class="contact__subtitle">
+                        ygetachew729@gmail.com
+                    </span>
+                </div>
             </div>
 
             <div class="contact__information">
-              <i
-                class="uil uil-map-marker contact__icon"
-                aria-hidden="true"
-              ></i>
-              <div>
-                <h3 class="contact__title">Location</h3>
-                <span class="contact__subtitle">Addis Ababa, Ethiopia</span>
-              </div>
+                <i
+                    class="uil uil-map-marker contact__icon"
+                    aria-hidden="true"
+                ></i>
+                <div>
+                    <h3 class="contact__title">Location</h3>
+                    <span class="contact__subtitle">Addis Ababa, Ethiopia</span>
+                </div>
             </div>
-          </div>
+        </div>
 
-          <!-- Contact Form -->
-          <form
-            action="mailto:ygetachew729@gmail.com"
-            method="POST"
-            class="contact__form grid"
-            enctype="text/plain"
-          >
+        <form id="contact-form" class="contact__form grid" onsubmit="sendEmail(event)">
             <div class="contact__inputs grid">
-              <div class="contact__content">
-                <label for="name" class="content__label">Name</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  class="contact__input"
-                  required
-                />
-              </div>
-              <div class="contact__content">
-                <label for="email" class="content__label">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  class="contact__input"
-                  required
-                />
-              </div>
+                <div class="contact__content">
+                    <label for="name" class="content__label">Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        class="contact__input"
+                        required
+                    />
+                </div>
+                <div class="contact__content">
+                    <label for="email" class="content__label">Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        class="contact__input"
+                        required
+                    />
+                </div>
             </div>
 
             <div class="contact__content">
-              <label for="message" class="content__label">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                rows="7"
-                class="contact__input"
-                required
-              ></textarea>
+                <label for="message" class="content__label">Message</label>
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="7"
+                    class="contact__input"
+                    required
+                ></textarea>
             </div>
 
+            <input type="hidden" name="time" id="current-time">
+
             <div>
-              <button
-                type="submit"
-                class="button button--flex"
-                title="Send Message"
-              >
-                Send Message
-                <i class="uil uil-message button__icon"></i>
-              </button>
+                <button type="submit" class="button button--flex" title="Send Message">
+                    Send Message
+                    <i class="uil uil-message button__icon"></i>
+                </button>
             </div>
-          </form>
-        </div>
-      </section>
+        </form>
+    </div>
+</section>
+
+</script>
     </main>
     <footer class="footer">
       <div class="footer__bg">
@@ -721,7 +721,12 @@
       src="https://kit.fontawesome.com/2205d59d52.js"
       crossorigin="anonymous"
     ></script>
+    
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script type="text/javascript" src="contactus.js"></script>
     <script src="skills.js"></script>
     <script src="assets/ptj.js"></script>
   </body>
 </html>
+

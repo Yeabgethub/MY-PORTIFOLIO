@@ -1,0 +1,87 @@
+/*================ Contact Me ===============*/
+
+.contact__container {
+  row-gap: 2rem;
+}
+
+.contact__information {
+  display: flex;
+  margin-bottom: var(--mb-2);
+}
+
+.contact__icon {
+  font-size: 2rem;
+  color: var(--first-color);
+  margin-right: var(--mb-0-75);
+}
+
+.contact__title {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+}
+
+.contact__subtitle {
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+}
+.contact__content {
+  background-color: var(--input-color);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem 0.25rem;
+}
+.contact__label {
+  font-size: var(--smaller-font-size);
+  color: var(--title-color);
+}
+
+.contact__input {
+  width: 100%;
+  background-color: var(--input-color);
+  color: var(--text-color);
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  border: none;
+  outline: none;
+  padding: 0.25rem 0.5rem 0.5rem 0;
+} /* Styles for the Form Messages Notification */
+#form-messages {
+  /* Positioning and Layout */
+  position: fixed; /* Stays in place relative to the viewport */
+  bottom: 20px; /* <--- CHANGED THIS: Distance from the bottom */
+  left: 50%; /* Start from the middle of the screen */
+  transform: translateX(
+    -50%
+  ); /* Shift left by half its width to truly center horizontally */
+  z-index: 1000; /* Ensure it's on top of most other content */
+  min-width: 280px; /* Minimum width for the notification */
+  text-align: center; /* Center the text inside */
+  padding: 15px 25px; /* Padding inside the notification */
+
+  /* Appearance */
+  border-radius: 8px; /* Slightly rounded corners */
+  font-size: 1rem; /* Base font size */
+  color: white; /* Text color */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+
+  /* Hidden by default and transition for fade effect */
+  display: none; /* Hide it initially */
+  opacity: 0; /* Make it transparent initially */
+  /* Smooth transition for opacity and visibility changes */
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+/* Styles for the Close Button inside the notification */
+#close-message {
+  background: none; /* No background color */
+  border: none; /* No border */
+  color: white; /* Text color for the 'X' */
+  font-size: 1.2rem; /* Larger font size for the 'X' */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  margin-left: 15px; /* Space between message text and button */
+  vertical-align: middle; /* Align vertically with the text */
+}
+
+/* You might want to add a hover effect for the close button */
+#close-message:hover {
+  opacity: 0.8; /* Slight fade on hover */
+}
