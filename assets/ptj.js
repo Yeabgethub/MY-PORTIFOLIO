@@ -24,14 +24,13 @@ function linkAction() {
 navLink.forEach((n) => n.addEventListener("click", linkAction));
 
 /*======================= ACCORD SKILLS ======================*/
-
 const skillsContent = document.getElementsByClassName("skills__content"),
   skillsHeader = document.querySelectorAll(".skills__header");
 
 function toggleSkills() {
   let itemClass = this.parentNode.className;
 
-  for (i = 0; i < skillsContent.length; i++) {
+  for (let i = 0; i < skillsContent.length; i++) {
     skillsContent[i].className = "skills__content skills__close";
   }
   if (itemClass === "skills__content skills__close") {
@@ -41,46 +40,6 @@ function toggleSkills() {
 
 skillsHeader.forEach((el) => {
   el.addEventListener("click", toggleSkills);
-});
-
-
-
-/*======================= Services Modal ===================*/
-const modalViews = document.querySelectorAll(".services__modal"),
-  modalBtns = document.querySelectorAll(".services__button"),
-  modalCloses = document.querySelectorAll(".services__modal-close");
-
-let modal = function (modalClick) {
-  modalViews[modalClick].classList.add("active-modal");
-};
-
-modalBtns.forEach((modalBtn, i) => {
-  modalBtn.addEventListener("click", () => {
-    modal(i);
-  });
-});
-
-modalCloses.forEach((modalClose) => {
-  modalClose.addEventListener("click", () => {
-    modalViews.forEach((modalView) => {
-      modalView.classList.remove("active-modal");
-    });
-  });
-});
-
-/*======================= Portfolio Swiper ===================*/
-var swiper = new Swiper(".portfolio__container", {
-  cssMode: true,
-  loop: true,
-
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
 });
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
@@ -144,10 +103,10 @@ const getCurrentIcon = () =>
 if (selectedTheme) {
   // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
   document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
-    darkTheme,
+    darkTheme
   );
   themeButton.classList[selectedIcon === "uil-moon" ? "add" : "remove"](
-    iconTheme,
+    iconTheme
   );
 }
 
@@ -160,3 +119,27 @@ themeButton.addEventListener("click", () => {
   localStorage.setItem("selected-theme", getCurrentTheme());
   localStorage.setItem("selected-icon", getCurrentIcon());
 });
+
+// javascript fro view in detail button
+function toggleDetails(button) {
+  // Get the parent portfolio content div
+  var portfolioContent = button.closest(".portfolio__content");
+
+  // Find the corresponding detail section inside the portfolio content
+  var detailSection = portfolioContent.querySelector(".portfolio__detail");
+
+  // Toggle the display of the details section
+  if (
+    detailSection.style.display === "none" ||
+    detailSection.style.display === ""
+  ) {
+    detailSection.style.display = "block";
+  } else {
+    detailSection.style.display = "none";
+  }
+}
+// toggle certificates
+function toggleCertificates() {
+  const certSection = document.getElementById("certificates-section");
+  certSection.classList.toggle("hidden");
+}

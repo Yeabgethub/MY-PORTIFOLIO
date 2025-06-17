@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects Section</title>
+    <script src="https://unpkg.com/framer-motion@10.16.4/dist/framer-motion.js"></script>
+    <link rel="stylesheet" href="project.css" />
+  </head>
+  <body>
+    <section id="projects" class="py-20">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="section-title">My Projects</h2>
+          <p class="section-subtitle max-w-2xl mx-auto">
+            Take a look at some of my featured projects that showcase my skills
+            and passion for web development.
+          </p>
+        </div>
+
+        <div
+          class="flex justify-center flex-wrap gap-3 mb-12"
+          id="filter-buttons"
+        >
+          <button
+            class="px-4 py-2 rounded-full text-sm font-medium transition-all bg-primary text-white shadow-md"
+            data-filter="All"
+          >
+            All
+          </button>
+          <button
+            class="px-4 py-2 rounded-full text-sm font-medium transition-all bg-muted hover:bg-muted/80 text-foreground"
+            data-filter="Web App"
+          >
+            Web App
+          </button>
+          <button
+            class="px-4 py-2 rounded-full text-sm font-medium transition-all bg-muted hover:bg-muted/80 text-foreground"
+            data-filter="Website"
+          >
+            Website
+          </button>
+          <button
+            class="px-4 py-2 rounded-full text-sm font-medium transition-all bg-muted hover:bg-muted/80 text-foreground"
+            data-filter="Mobile App"
+          >
+            Mobile App
+          </button>
+        </div>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          id="projects-container"
+        >
+          <!-- Projects will be inserted here by JavaScript -->
+        </div>
+
+        <div class="text-center mt-12">
+          <a
+            href="#"
+            class="inline-flex items-center justify-center px-6 py-3 border border-primary text-primary rounded-md hover:bg-primary/10 transition-colors"
+          >
+            View All Projects
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <script src="project.js"></script>
+  </body>
+</html>
