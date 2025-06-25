@@ -1,0 +1,121 @@
+<section class="portfolio section" id="portfolio">
+  <div class="portfolio__container container swiper-container">
+    <div class="swiper-wrapper">
+      <div class="portfolio__content grid swiper-slide">
+        <img
+          src="assets/img/Hotelmanagement.png"
+          class="portfolio__img"
+          alt="Hotelmanagement project"
+        />
+        <div class="portfolio__data">
+          <h3 class="portfolio__title">Hotelmanagement</h3>
+          <p class="portfolio__description">
+            This project, developed in C++, focuses on managing student records.
+            It allows users to add, update, and delete student information.
+          </p>
+
+          <!-- Languages Used -->
+          <div class="portfolio__languages">
+            <span class="language-item">HTML/CSS</span>
+            <span class="language-item">JAVASCRIPT/PHP</span>
+            <span class="language-item">SQL</span>
+          </div>
+
+          <a
+            href="https://github.com/Venkateeshh/Student-Management"
+            class="button button--flex button--small portfolio__button"
+            title="View code on GitHub"
+          >
+            View Code on GitHub
+            <i class="uil uil-external-link-alt button__icon"></i>
+          </a>
+
+          <a
+            href="#"
+            class="button button--flex button--small portfolio__button"
+            title="Try the Live Demo"
+          >
+            Try the Live Demo
+            <i class="uil uil-external-link-alt button__icon"></i>
+          </a>
+
+          <!-- View in Detail Button -->
+          <div class="view-all-button-container">
+            <button
+              class="button button--flex button--small portfolio__button"
+              title="View in Detail"
+              onclick="toggleDetails(this)"
+            >
+              View in Detail
+              <i class="uil uil-external-link-alt button__icon"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Hidden Detailed Description Section (Initially Hidden) -->
+        <div class="portfolio__detail" style="display: none">
+          <h3>Project Details</h3>
+
+          <!-- Project Page Images -->
+          <div class="project-pages">
+            <!-- Page 1: Homepage -->
+            <div class="project-page">
+              <img
+                src="assets/img/Hotel management_home.png"
+                alt="hotel management Homepage Image"
+              />
+              <h4>Homepage</h4>
+              <p>
+                This is the homepage of the Student Management system. It serves
+                as the central hub where users can navigate to other sections.
+              </p>
+              <ul>
+                <li>
+                  Allows access to different sections: Add student, Update
+                  student, View students
+                </li>
+                <li>Provides an overview of the system's functionalities</li>
+              </ul>
+            </div>
+
+            <!-- Page 2: Login Page -->
+            <div class="project-page">
+              <img
+                src="assets/img/hotel management_login.png"
+                alt="Login Page Image"
+              />
+              <h4>Login Page</h4>
+              <p>
+                This page allows users to log into the system using their
+                credentials.
+              </p>
+              <ul>
+                <li>Form for username and password</li>
+                <li>Authentication mechanism for secure login</li>
+              </ul>
+            </div>
+
+            <!-- Page 3: Admin Dashboard -->
+            <div class="project-page">
+              <img
+                src="assets/img/project1_admin.png"
+                alt="Admin Dashboard Image"
+              />
+              <h4>Admin Dashboard</h4>
+              <p>
+                The admin dashboard allows administrators to manage the student
+                records, view statistics, and more.
+              </p>
+              <ul>
+                <li>Shows a list of all students</li>
+                <li>Enables deleting or editing records</li>
+                <li>Displays basic statistics about the system</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
